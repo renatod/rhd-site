@@ -12,5 +12,8 @@ export default {
   },
   modules: [
     'bootstrap-vue/nuxt'
-  ]
+  ],
+  server: {
+    port: process.env.PORT || 3000
+  }
 }
