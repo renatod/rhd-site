@@ -1,12 +1,12 @@
 <template>
   <section>
-    <a href="#">{{ item.full_name }}</a>
+    <a href="#">{{ item.fullName }}</a>
     <p>{{ item.description }}</p>
     <ul>
-      <li v-if="item.license">{{ item.license.spdx_id }}</li>
+      <li v-if="item.license">{{ item.license }}</li>
       <li v-if="item.language"><FontAwesomeIcon :icon="icons.faCircle" /> {{ item.language }}</li>
-      <li v-if="item.stargazers_count"><FontAwesomeIcon :icon="icons.faStar" /> {{ item.stargazers_count }}</li>
-      <li v-if="item.forks_count"><FontAwesomeIcon :icon="icons.faCodeBranch" /> {{ item.forks_count }}</li>
+      <li v-if="item.stargazers"><FontAwesomeIcon :icon="icons.faStar" /> {{ item.stargazers }}</li>
+      <li v-if="item.forks"><FontAwesomeIcon :icon="icons.faCodeBranch" /> {{ item.forks }}</li>
     </ul>
   </section>
 </template>

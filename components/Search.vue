@@ -1,9 +1,9 @@
 <template>
-  <b-form @submit="search">
+  <b-form>
     <b-form-group label="Language">
       <b-form-select v-model="language" :options="options"></b-form-select>
     </b-form-group>
-    <b-button variant="outline-primary" type="submit">Load</b-button>
+    <b-button variant="outline-primary" @click="search">Load</b-button>
   </b-form>
 </template>
 

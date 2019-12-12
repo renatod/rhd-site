@@ -24,19 +24,21 @@ export default {
   },
   data() {
     return {
+      language: null,
       showResult: false
     }
   },
   methods: {
     search({ language }) {
+      this.language = language
       this.$refs.scroll.refresh()
     },
     provider({ page, pageSize }, callback) {
-      axios.get(`https://api.github.com/search/repositories?q=language:javascript&sort=stars&order=desc&per_page=${pageSize}&page=${page}`)
+      axios.get(`https://api-rhd.herokuapp.com/repositories?page=${page}&per_page=${pageSize}&lang=${this.language || ''}`)
         .then(({ data }) => {
           callback({
-            result: data.items,
-            hits: data.total_count
+            result: data.rows,
+            hits: data.count
           })
         })
     }
