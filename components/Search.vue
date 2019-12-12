@@ -14,11 +14,11 @@ export default {
       language: null,
       options: [
         { value: null, text: 'All' },
-        { value: 'javascript', text: 'JavaScript' },
-        { value: 'python', text: 'Python' },
-        { value: 'java', text: 'Java' },
-        { value: 'php', text: 'PHP' },
-        { value: 'ruby', text: 'Ruby' }
+        { value: 'JavaScript', text: 'JavaScript' },
+        { value: 'Python', text: 'Python' },
+        { value: 'Java', text: 'Java' },
+        { value: 'PHP', text: 'PHP' },
+        { value: 'Ruby', text: 'Ruby' }
       ]
     }
   },
