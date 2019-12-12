@@ -1,6 +1,6 @@
 <template>
   <section>
-    <a href="#">{{ item.fullName }}</a>
+    <nuxt-link :to="`/${item.id}`">{{ item.fullName }}</nuxt-link>
     <p>{{ item.description }}</p>
     <ul>
       <li v-if="item.license">{{ item.license }}</li>
