@@ -1,7 +1,6 @@
 <template>
   <b-container fluid>
     <Search @search="search"/>
-    <hr />
     <Scroll ref="scroll" :provider="provider" :page-size="10">
       <template v-slot:item="{ item }">
         <Card :item="item" />
