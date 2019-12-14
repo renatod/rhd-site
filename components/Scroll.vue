@@ -63,7 +63,7 @@ export default {
           this.items = _.concat(this.items, result)
           this.busy = false
           this.page++
-          this.scroll()
+          this.onScroll()
         })
       }
     },
