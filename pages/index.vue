@@ -32,14 +32,18 @@ export default {
       this.language = language
       this.$refs.scroll.refresh()
     },
-    provider({ page, pageSize }, callback) {
-      axios.get(`https://api-rhd.herokuapp.com/repositories?page=${page}&per_page=${pageSize}&lang=${this.language || ''}`)
-        .then(({ data }) => {
-          callback({
-            result: data.rows,
-            hits: data.count
-          })
-        })
+    async provider({ page, pageSize }, callback) {
+      const { data } = await axios.get('https://api-rhd.herokuapp.com/repositories', {
+          params: {
+            page: page,
+            per_page: pageSize,
+            lang: this.language
+          }
+      })
+      callback({
+        result: data.rows,
+        hits: data.count
+      })
     }
   }
 }
