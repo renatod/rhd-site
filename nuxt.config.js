@@ -13,6 +13,13 @@ export default {
   modules: [
     'bootstrap-vue/nuxt'
   ],
+  buildModules: [
+    '@nuxtjs/gtm',
+  ],
+  gtm: {
+    id: 'GTM-KW8ZKQN',
+    enabled: true
+  },
   server: {
     port: process.env.PORT || 3000
   }
