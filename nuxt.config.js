@@ -18,7 +18,8 @@ export default {
   ],
   gtm: {
     id: 'GTM-KW8ZKQN',
-    enabled: true
+    enabled: true,
+    pageTracking: true
   },
   server: {
     port: process.env.PORT || 3000
