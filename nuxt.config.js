@@ -16,10 +16,13 @@ export default {
   buildModules: [
     '@nuxtjs/gtm',
   ],
+  plugins: [
+    '~/plugins/gtm'
+  ],
   gtm: {
-    id: 'GTM-KW8ZKQN',
     enabled: true,
-    pageTracking: true
+    pageTracking: true,
+    pageViewEventName: 'pageView'
   },
   server: {
     port: process.env.PORT || 3000
