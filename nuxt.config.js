@@ -19,6 +19,7 @@ export default {
   gtm: {
     id: 'GTM-KW8ZKQN',
     enabled: true,
+    pageTracking: true,
     pageViewEventName: 'pageView'
   },
   server: {
